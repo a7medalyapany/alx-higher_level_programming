@@ -1,4 +1,4 @@
-# Sprint 2 README
+# Sprint 2
 
 ## Projects Overview
 
