@@ -61,3 +61,13 @@ class Rectangle(Base):
             raise ValueError("{} must be >= 0".format(name))
         elif not eq and value <= 0:
             raise ValueError("{} must be > 0".format(name))
+
+    def area(self):
+        """Calc area of Rec."""
+        return self.__width * self.__height
+
+    def display(self):
+        """Prints the rectangle in stdout with #"""
+        s = '\n' * self.__y + \
+            (' ' * self.__x + '#' * self.__width + '\n') * self.__height
+        print(s, end='')
