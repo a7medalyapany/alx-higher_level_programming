@@ -36,6 +36,10 @@ class Square(Rectangle):
         if y is not None:
             self.y = y
 
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Square."""
+        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+
     def update(self, *args, **kwargs):
         '''Updates instance attributes via no-keyword & keyword args.'''
         if args:
