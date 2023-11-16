@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-    """Method for adding 2 new lines after '.?:' chars.
+    """Method for adding 2 new lns after '.?:' chars.
 
     Args:
         text: The str text.
@@ -17,7 +17,7 @@ def text_indentation(text):
     for delim in ".?:":
         # print(delim, text.split(delim))
         text = (delim + "\n\n").join(
-            [line.strip(" ") for line in text.split(delim)])
+            [ln.strip(" ") for ln in text.split(delim)])
 
     print(text, end="")
 

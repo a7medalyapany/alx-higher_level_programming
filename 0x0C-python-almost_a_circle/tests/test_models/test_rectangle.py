@@ -163,52 +163,52 @@ given"
     def test_G_validate_type(self):
         '''Tests property validation.'''
         r = Rectangle(1, 2)
-        attributes = ["x", "y", "width", "height"]
-        for attribute in attributes:
-            s = "{} must be an integer".format(attribute)
+        attrs = ["x", "y", "width", "height"]
+        for attr in attrs:
+            s = "{} must be an integer".format(attr)
             for invalid_type in self.invalid_types():
                 with self.assertRaises(TypeError) as e:
-                    setattr(r, attribute, invalid_type)
+                    setattr(r, attr, invalid_type)
                 self.assertEqual(str(e.exception), s)
 
     def test_G_validate_value_negative_gt(self):
         '''Tests property validation.'''
         r = Rectangle(1, 2)
-        attributes = ["width", "height"]
-        for attribute in attributes:
-            s = "{} must be > 0".format(attribute)
+        attrs = ["width", "height"]
+        for attr in attrs:
+            s = "{} must be > 0".format(attr)
             with self.assertRaises(ValueError) as e:
-                setattr(r, attribute, -(randrange(10) + 1))
+                setattr(r, attr, -(randrange(10) + 1))
             self.assertEqual(str(e.exception), s)
 
     def test_G_validate_value_negative_ge(self):
         '''Tests property validation.'''
         r = Rectangle(1, 2)
-        attributes = ["x", "y"]
-        for attribute in attributes:
-            s = "{} must be >= 0".format(attribute)
+        attrs = ["x", "y"]
+        for attr in attrs:
+            s = "{} must be >= 0".format(attr)
             with self.assertRaises(ValueError) as e:
-                setattr(r, attribute, -(randrange(10) + 1))
+                setattr(r, attr, -(randrange(10) + 1))
             self.assertEqual(str(e.exception), s)
 
     def test_G_validate_value_zero(self):
         '''Tests property validation.'''
         r = Rectangle(1, 2)
-        attributes = ["width", "height"]
-        for attribute in attributes:
-            s = "{} must be > 0".format(attribute)
+        attrs = ["width", "height"]
+        for attr in attrs:
+            s = "{} must be > 0".format(attr)
             with self.assertRaises(ValueError) as e:
-                setattr(r, attribute, 0)
+                setattr(r, attr, 0)
             self.assertEqual(str(e.exception), s)
 
     def test_H_property(self):
         '''Tests property setting/getting.'''
         r = Rectangle(1, 2)
-        attributes = ["x", "y", "width", "height"]
-        for attribute in attributes:
+        attrs = ["x", "y", "width", "height"]
+        for attr in attrs:
             n = randrange(10) + 1
-            setattr(r, attribute, n)
-            self.assertEqual(getattr(r, attribute), n)
+            setattr(r, attr, n)
+            self.assertEqual(getattr(r, attr), n)
 
     def test_H_property_range_zero(self):
         '''Tests property setting/getting.'''
@@ -590,6 +590,7 @@ given"
         r2.update(**r1_dictionary)
         self.assertEqual(str(r1), str(r2))
         self.assertNotEqual(r1, r2)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -19,7 +19,7 @@ class TestBase(unittest.TestCase):
         pass
 
     def test_A_nb_objects_private(self):
-        '''Tests if nb_objects is private class attribute.'''
+        '''Tests if nb_objects is private class attr.'''
         self.assertTrue(hasattr(Base, "_Base__nb_objects"))
 
     def test_B_nb_objects_initialized(self):
@@ -286,6 +286,7 @@ were given"
         self.assertEqual(str(list_in[0]), str(list_out[0]))
         self.assertNotEqual(id(list_in[1]), id(list_out[1]))
         self.assertEqual(str(list_in[1]), str(list_out[1]))
+
 
 if __name__ == "__main__":
     unittest.main()

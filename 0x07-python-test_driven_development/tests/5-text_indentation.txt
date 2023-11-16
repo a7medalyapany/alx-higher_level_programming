@@ -32,95 +32,95 @@ Test string with empty string 2:
 Test simple:
     >>> text_indentation("Hello: Holberton")
     Hello:
-    <BLANKLINE>
+    <BLANKln>
     Holberton
 
 Test delims with spaces:
     >>> text_indentation("      ?:  :  ")
     ?
-    <BLANKLINE>
+    <BLANKln>
     :
-    <BLANKLINE>
+    <BLANKln>
     :
-    <BLANKLINE>
+    <BLANKln>
 
-Test newline:
+Test newln:
     >>> text_indentation("\n")
-    <BLANKLINE>
+    <BLANKln>
 
-Test newline 2:
+Test newln 2:
     >>> text_indentation("\n\n")
-    <BLANKLINE>
-    <BLANKLINE>
+    <BLANKln>
+    <BLANKln>
 
-Test newline 3:
+Test newln 3:
     >>> text_indentation("Hello\n\n")
     Hello
-    <BLANKLINE>
+    <BLANKln>
 
 Test all delimeters:
     >>> text_indentation("Hello: Holberton? school. fooo")
     Hello:
-    <BLANKLINE>
+    <BLANKln>
     Holberton?
-    <BLANKLINE>
+    <BLANKln>
     school.
-    <BLANKLINE>
+    <BLANKln>
     fooo
 
 Test all delimeters with spaces:
     >>> text_indentation("Hello   :     Holberton    ?    school.    fooo")
     Hello:
-    <BLANKLINE>
+    <BLANKln>
     Holberton?
-    <BLANKLINE>
+    <BLANKln>
     school.
-    <BLANKLINE>
+    <BLANKln>
     fooo
 
 Test all delimeters with spaces at end:
     >>> text_indentation("Hello   :     Holberton    ?    school.    fooo     ")
     Hello:
-    <BLANKLINE>
+    <BLANKln>
     Holberton?
-    <BLANKLINE>
+    <BLANKln>
     school.
-    <BLANKLINE>
+    <BLANKln>
     fooo
 
 Test just delimeters:
     >>> text_indentation(".?:")
     .
-    <BLANKLINE>
+    <BLANKln>
     ?
-    <BLANKLINE>
+    <BLANKln>
     :
-    <BLANKLINE>
+    <BLANKln>
 
 Test just delimeters 2:
     >>> text_indentation("     ?   ")
     ?
-    <BLANKLINE>
+    <BLANKln>
 
 Test nonindent inside indent
     >>> text_indentation("?Hello.")
     ?
-    <BLANKLINE>
+    <BLANKln>
     Hello.
-    <BLANKLINE>
+    <BLANKln>
 
-Test existing newlines:
+Test existing newlns:
     >>> text_indentation("?\n\n.\n\n:")
     ?
-    <BLANKLINE>
-    <BLANKLINE>
-    <BLANKLINE>
+    <BLANKln>
+    <BLANKln>
+    <BLANKln>
     .
-    <BLANKLINE>
-    <BLANKLINE>
-    <BLANKLINE>
+    <BLANKln>
+    <BLANKln>
+    <BLANKln>
     :
-    <BLANKLINE>
+    <BLANKln>
 
 Test none:
     >>> text_indentation(None)
