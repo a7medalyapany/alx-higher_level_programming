@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+"""Module that fetches https://intranet.hbtn.io/status using the requests
+package"""
+import requests
+
+if __name__ == "__main__":
+    url = 'https://alx-intranet.hbtn.io/status'
+
+    response = requests.get(url)
+    body = response.text
+
+    print("Body response:")
+    print(f"    - type: {type(body)}")
+    print(f"    - content: {body}")
