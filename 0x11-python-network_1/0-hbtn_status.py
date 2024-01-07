@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# Module that fetches https://intranet.hbtn.io/status using urllib module
+"""Module that fetches https://intranet.hbtn.io/status using urllib module"""
+
 import urllib.request
 
 if __name__ == "__main__":
