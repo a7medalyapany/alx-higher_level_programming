@@ -6,6 +6,15 @@ const fs = require('fs');
 const url = process.argv[2];
 const filePath = process.argv[3];
 
+// function writeFile(filePath, content)
+function writeFile(filePath, content) {
+  fs.writeFile(filePath, content, 'utf8', (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
+}
+
 request(url, (error, response, body) => {
   if (error) {
     console.error(error);
@@ -17,11 +26,5 @@ request(url, (error, response, body) => {
     return;
   }
 
-  fs.writeFile(filePath, body, 'utf-8', (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log(`Response body successfully written to ${filePath}`);
-  });
+  writeFile(filePath, body);
 });
